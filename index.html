@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="angularjs-starter">
+
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Custom Plunker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      document.write('<base href="' + document.location + '" />');
+    </script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+  <div class="mainDiv">
+    <form name="myForm" ng-submit="doSomething()" class="ExForm">
+       <h4>Whitelisted words are: foo, hello world.</h4>
+       <input type="text" name="fruitName" ng-model="data.fruitName" whitelist="foo,hello world" required/>
+       <span class="invalid" ng-show="myForm.fruitName.$error.whitelist">
+          The phrase "{{data.fruitName}}" is not allowed</span>
+       <span class="invalid" ng-show="myForm.fruitName.$error.required">required</span>
+       <br/> <br/>
+       <button type="submit" ng-disabled="myForm.$invalid">Submit</button>
+    </form>
+  </div>
+  </body>
+
+</html>

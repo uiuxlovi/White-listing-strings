@@ -1,0 +1,28 @@
+/* CSS goes here */
+.invalid {
+  color: red;
+}
+.ng-invalid {
+  border-color: red;
+}
+
+body{
+    background-color: #FAF8F7;
+}
+
+button{
+    background-color: #DBD8D7;
+}
+
+.ExForm{
+  padding-top: 10%;
+  padding-left: 10%;
+}
+
+.mainDiv{
+    width: 500px;
+    height: 200px;
+    background-color: #F7EDEB;
+    margin-top: 15%;
+    margin-left: 30%;
+}
